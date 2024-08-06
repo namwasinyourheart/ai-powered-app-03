@@ -98,11 +98,11 @@ select {
 .statistic {
     /* background-color: red; */
     width: 390px;
-    height: 668px
+    height: 668px;
 }
 
 .summary {
     /* background-color: green; */
     width: calc(100% - 420px);
-    height: 668px
+    height: 668px;
 }
