@@ -1,0 +1,202 @@
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the height of the App is at least the height of the viewport */
+  text-align: center;
+  /* background-color: #f3f8fb; */
+  /* max-width: 800px;
+  justify-items: center; */
+}
+
+.header {
+  background-color: #282c34;
+  min-height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0 20px; 
+}
+
+.intro {
+  margin-bottom: 30px;
+  /* background-color: red; */
+  font-size: 3.25rem;
+  font-weight: 800;
+  color: #000;
+  line-height: 1rem;
+  font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+
+.sub-title {
+  /* color: #3D3D3D; */
+  /* margin-top: 40px; */
+  font-size: 18px;
+  margin-bottom: 20px;
+  /* font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; */
+}
+    
+
+
+
+ .summarize-now {
+  display: none;
+  /* display: inline-block;  */
+  padding: 0.5rem 1rem; /* Adjust padding for the button's size */
+  background-color: #4B4ACF; /* Background color for the button */
+  color: #fff; /* Text color */
+  text-align: center; /* Center text inside the button */
+  text-decoration: none; /* Remove underline from the link */
+  border-radius: 5px; /* Rounded corners */
+  border: none; /* Remove border */
+  font-size: 16px; /* Font size for the button text */
+  cursor: pointer; /* Pointer cursor to indicate clickable item */
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  width: 200px; /* Set a specific width for the button */
+  max-width: 100%; /* Ensure the button doesn’t exceed the container width */
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  /* font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji; */
+}
+
+.summarize-now:hover {
+  background-color: #4B4ACF; /* Darker background color on hover */
+}
+
+
+.video-container {
+  display: none;
+  /* display: flex; */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  /*height: 100vh; /* Optional: make container height full viewport height
+  margin: 0 auto; /* Optional: horizontally center if container has a width */
+}
+
+video {
+  max-width: 100%; /* Ensure video scales with the container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.main-content {
+  background-color: #f3f8fb;
+  /* margin-bottom: 70px; */
+}
+
+
+
+.main {
+  flex: 1; /* This makes the main content area grow and push the footer down */
+  display: flex;
+  flex-direction: column;
+
+}
+
+.footer {
+  height: 100px;
+  background-color: #282c34;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+/*
+/* .App {
+  text-align: center;
+  background-color: #fff;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 500vh;
+}
+
+.main {
+  grid-area: column1 / column2 / column3;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px; /* Optional: space between columns
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+ */
+
+
+
+
+/* .App {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 50px auto 50px;
+  grid-gap: 3px;
+  min-height: 100vh;
+  grid-template-areas:
+    "header header"
+    "navbar main"
+    "footer footer";
+} */
+
+/* .header {
+  grid-area: header;
+  background: #282c34;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.navbar {
+  grid-area: navbar;
+  background: #f4f4f4;
+  padding: 1rem;
+}
+
+.main {
+  grid-area: main;
+  padding: 1rem;
+  background: #fff;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #282c34;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+} */
