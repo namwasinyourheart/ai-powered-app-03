@@ -34,8 +34,10 @@ const URLSum = () => {
       {showOutput && (
         <div className='output-container'>
           <div className='statistic'>
-            <p>How to Build a to-do application</p>
             <p>Word Count: 5000</p>
+            <p>Characters Count: </p>
+            <p>Sentences Count: </p>
+            <p>Paragraphs Count: </p>
           </div>
 
           <div className='summary'>

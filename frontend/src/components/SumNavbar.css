@@ -2,7 +2,7 @@
 
 
 .sum-nav {
-  height: 40px;
+  height: 80px;
   /* background-color: #948f8f; */
   justify-content: center;
   align-items: center;
@@ -19,12 +19,12 @@
 
 .nav-item {
   list-style: none;
-  font-size: 20px;
+  font-size: 24px;
   padding: .5rem 1rem;
   /* background-color: #5D5DFF; */
   cursor: pointer; 
   text-decoration: none;
-  font-weight: bold;
+  /* font-weight: bold; */
   /* Add cursor to indicate clickable items */
 }
 

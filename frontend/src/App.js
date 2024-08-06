@@ -11,7 +11,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import FileSum from './pages/FileSum';
 import TextSum from './pages/TextSum';
-// import URLSum from './pages/URLSum';
+import URLSum from './pages/URLSum';
 
 const App = () => {
   return (
@@ -54,9 +54,10 @@ const App = () => {
         <Routes>
           <Route id='fileSum' path="/file-sum" element={<FileSum />} />
           <Route path="/text-sum" element={<TextSum />} />
-          {/* <Route path="/url-sum" element={<URLSum />} /> */}
+          <Route path="/url-sum" element={<URLSum />} />
         </Routes>
         </div>
+        
       </Router>
 
       <Text/>
