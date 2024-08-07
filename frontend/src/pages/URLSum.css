@@ -91,7 +91,7 @@ select {
     margin: auto;
     margin-top: 22px;
     margin-bottom: 40px;
-    height: 300px;
+    /* height: 500px; */
     /* display: flex; */
 }
 

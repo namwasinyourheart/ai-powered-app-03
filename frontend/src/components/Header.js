@@ -4,7 +4,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header className='header'>
-      <h1>AnySum</h1>
+      <h1 className='web-name'>AnySum</h1>
       {/* <p>Summarize any file with AI</p> */}
     </header>
   );

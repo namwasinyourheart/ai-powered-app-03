@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
 import './TextSum.css'; // Make sure to create this CSS file for styling
 
 const TextSum = () => {
     const [inputText, setInputText] = useState('');
     const [summary, setSummary] = useState('');
-    const [showOutput, setShowOutput] = useState(false); // New state for controlling output visibility
-    const [loading, setLoading] = useState(false); // New state for loading status
-    const [error, setError] = useState(''); // New state for error messages
-    const [copyStatus, setCopyStatus] = useState('Copy'); // New state for copy button text
+    const [showOutput, setShowOutput] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
+    const [copyStatus, setCopyStatus] = useState('Copy');
 
     const handleSummarize = () => {
         if (!inputText.trim()) {
@@ -15,34 +16,36 @@ const TextSum = () => {
             return;
         }
 
-        setError(''); // Clear any previous errors
-        setLoading(true); // Set loading to true when summarizing starts
-        setShowOutput(false); // Hide output while summarizing
+        setError('');
+        setLoading(true);
+        setShowOutput(false);
 
-        // Simulate a delay for loading effect (e.g., API call delay)
         setTimeout(() => {
             // Basic summarization logic (placeholder for actual algorithm)
             const sentences = inputText.split('. ');
             const summaryText = sentences.slice(0, Math.ceil(sentences.length / 2)).join('. ');
 
-            setSummary(summaryText);
-            setShowOutput(true); // Show the output container after summarizing
-            setLoading(false); // Set loading to false when summarizing is done
+            // Convert summary to markdown format (you can customize this)
+            const markdownSummary = `**Summary**\n\n${summaryText}`;
+
+            setSummary(markdownSummary);
+            setShowOutput(true);
+            setLoading(false);
         }, 1000); // Simulated delay of 1 second
     };
 
     const handleCopy = () => {
         navigator.clipboard.writeText(summary).then(() => {
             setCopyStatus('Copied!');
-            setTimeout(() => setCopyStatus('Copy'), 2000); // Revert text back to "Copy" after 2 seconds
+            setTimeout(() => setCopyStatus('Copy'), 2000);
         }).catch(() => {
             setCopyStatus('Failed to copy');
-            setTimeout(() => setCopyStatus('Copy'), 2000); // Revert text back to "Copy" after 2 seconds
+            setTimeout(() => setCopyStatus('Copy'), 2000);
         });
     };
 
     const handleRegenerate = () => {
-        handleSummarize(); // Reuse the summarize function to regenerate summary
+        handleSummarize();
     };
 
     return (
@@ -60,17 +63,38 @@ const TextSum = () => {
                 {error && <div className='error-message'>{error}</div>}
             </div>
 
-            {showOutput && ( // Conditionally render the output container
+            {showOutput && (
                 <div className='output-container'>
-                    <div className='statistic'>
-                    <p>Word Count: 5000</p>
-                    <p>Characters Count: </p>
-                    <p>Sentences Count: </p>
-                    <p>Paragraphs Count: </p>
+                    <div className="statistic">
+                        <div className="stats-container">
+                            <div className="stat-item">239 Words</div>
+                            <div className="stat-item">1,092 Characters</div>
+                            <div className="stat-item">853 Characters without space</div>
+                            <div className="stat-item">316 Syllables</div>
+                            <div className="stat-item">10 Sentences</div>
+                            <div className="stat-item">11 Paragraphs</div>
+                            <div className="stat-item">0:57 Reading time</div>
+                            <div className="stat-item">1:35 Speaking time</div>
+                        </div>
+
+                        <div className="keywords-container">
+                            <div className="keyword-header">Top keywords</div>
+                            <div className="keyword-row">
+                                <div className="keyword-type">1-word</div>
+                                <div className="keyword-type">2-word</div>
+                                <div className="keyword-type">3-word</div>
+                            </div>
+                            <div className="keyword-row">
+                                <div className="keyword">các</div>
+                                <div className="keyword">tóm</div>
+                                <div className="keyword">tắt</div>
+                                <div className="keyword">hiểu</div>
+                                <div className="keyword">dung</div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className='summary'>
-                        <div className='tabs'>
                         <div className='tabs'>
                             <button className='tab-button'>Length</button>
                             <button className='tab-button'>Translate</button>
@@ -82,11 +106,7 @@ const TextSum = () => {
                                 Regenerate
                             </button>
                         </div>
-                            {/* <div className='tab'>
-                                
-                            </div> */}
-                        </div>
-                        <p>{summary}</p>
+                        <ReactMarkdown className="markdown-content">{summary}</ReactMarkdown>
                     </div>
                 </div>
             )}
