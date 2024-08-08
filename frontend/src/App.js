@@ -52,12 +52,13 @@ const App = () => {
         {/* <h1>Enter an Article URL or paste your Text</h1> */}
         <Navbar />
         <Routes>
+        <Route id='fileSum' path="/" element={<FileSum />} />
           <Route id='fileSum' path="/file-sum" element={<FileSum />} />
           <Route path="/text-sum" element={<TextSum />} />
           <Route path="/url-sum" element={<URLSum />} />
         </Routes>
         </div>
-        
+
       </Router>
 
       <Text/>
